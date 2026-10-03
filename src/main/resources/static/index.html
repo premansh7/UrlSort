@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>urlsort — Make links shorter.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="page">
+    <nav class="nav">
+      <div class="brand">url<span>sort</span></div>
+      <div class="nav-dot"></div>
+    </nav>
+
+    <section class="hero">
+      <p class="eyebrow">WELCOME TO</p>
+      <h1>url<span>sort</span></h1>
+      <p class="hook">Long link. Short story.</p>
+
+      <div class="shortener-card">
+        <div class="card-label">DROP YOUR URL</div>
+
+        <form id="shortenForm">
+          <div class="input-wrap">
+            <span class="input-icon">↗</span>
+            <input
+              id="urlInput"
+              type="url"
+              placeholder="https://your-long-url.com/..."
+              autocomplete="off"
+              required
+            />
+            <button type="submit" id="shortenBtn">
+              <span>Shorten</span>
+              <span class="arrow">→</span>
+            </button>
+          </div>
+        </form>
+
+        <p class="error" id="errorMessage"></p>
+
+        <div class="result" id="result">
+          <div class="result-top">
+            <span>HERE'S YOUR SORTURL</span>
+            <button class="copy-btn" id="copyBtn" type="button">COPY</button>
+          </div>
+
+          <a id="shortUrl" href="#" target="_blank" rel="noopener noreferrer"></a>
+          <p id="originalUrl"></p>
+        </div>
+      </div>
+
+      <p class="footer-note">shorter links. cleaner sharing.</p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
